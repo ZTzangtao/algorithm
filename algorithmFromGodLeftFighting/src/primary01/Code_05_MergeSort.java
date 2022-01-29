@@ -1,6 +1,8 @@
 package primary01;
 
 /**
+ * 归并排序
+ *
  * @Author: Tommy
  * @DATE: 2021/6/4
  */
@@ -19,9 +21,12 @@ public class Code_05_MergeSort {
         }
         //L和R中点的位置
         int mid = L + ((R - L) >> 1);
-        sortProcess(arr, L, mid); //T(N/2)
-        sortProcess(arr, mid + 1, R); //T(N/2)
-        merge(arr, L, mid, R); //T(N) = 2(T(N/2)) + O(N)  =  O(N*logN)
+        //T(N/2)
+        sortProcess(arr, L, mid);
+        //T(N/2)
+        sortProcess(arr, mid + 1, R);
+        //T(N) = 2(T(N/2)) + O(N)  =  O(N*logN)
+        merge(arr, L, mid, R);
     }
 
     private static void merge(int[] arr, int L, int mid, int R) {

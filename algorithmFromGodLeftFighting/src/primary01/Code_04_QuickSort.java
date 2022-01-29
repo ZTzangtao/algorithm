@@ -15,6 +15,7 @@ public class Code_04_QuickSort {
 
     private static void quickSort(int[] arr, int L, int R) {
         if (L < R) {
+            // 挑选随机树放在数组末尾
             swap(arr, L + (int) (Math.random() * (R - L + 1)), R);
             int[] p = partition(arr, L, R);
             quickSort(arr, L, p[0] - 1);

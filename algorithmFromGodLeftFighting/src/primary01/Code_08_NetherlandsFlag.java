@@ -3,6 +3,8 @@ package primary01;
 import java.util.Arrays;
 
 /**
+ * 荷兰国旗问题 (小于num放左边，等于num放中间，大于num放右边)
+ *
  * @Author: Tommy
  * @DATE: 2021/6/5
  */
@@ -25,8 +27,9 @@ public class Code_08_NetherlandsFlag {
                 L++;
             }
         }
-        return new int[]{less + 1, more - 1};
-//        return arr;
+        // 返回等于num的 边界值  下标 index
+//        return new int[]{less + 1, more - 1};
+        return arr;
     }
 
     private static void swap(int[] arr, int i, int j) {
