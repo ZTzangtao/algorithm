@@ -1,10 +1,22 @@
 package primary01;
 
+import java.util.Arrays;
+
 /**
+ *
  * @Author: Tommy
  * @DATE: 2021/6/6
  */
 public class Code_04_QuickSort {
+
+    public static void main(String[] args) {
+        int[] arr = {1,3,5,5,46,4,42,2,23,42,35,42};
+        int[] newArr = partition(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(newArr));
+        quickSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 
     public static void quickSort(int[] arr) {
         if (arr == null || arr.length < 2) {
