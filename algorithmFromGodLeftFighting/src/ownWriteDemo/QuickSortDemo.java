@@ -41,9 +41,13 @@ public class QuickSortDemo {
      * @param R
      */
     public static int[] partition(int[] arr, int L, int R) {
+        // 左边区域
         int less = L - 1;
+        // 右边区域
         int more = R + 1;
+        // 待比较的值
         int i = arr[R];
+        // 当前位置
         int cur = L;
         while(cur < more){
             if (arr[cur] < i){
