@@ -36,7 +36,6 @@ public class Lc675CutOffTree {
             lastC = cell[1];
             forest.get(lastR).set(lastC, 1);
         }
-
         return ans;
     }
 
@@ -75,8 +74,6 @@ public class Lc675CutOffTree {
                         deque.offerLast(move);
                     }
                 }
-
-
             }
         }
         return -1;
