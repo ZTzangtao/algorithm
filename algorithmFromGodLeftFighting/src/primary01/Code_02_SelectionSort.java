@@ -2,12 +2,11 @@ package primary01;
 
 /**
  * @Author: Tommy
+ * i ~ n-1范围上，找到最小值并放在i位置，然后i+1 ~ n-1范围上继续
  * @DATE: 2021/6/3
  */
 public class Code_02_SelectionSort {
-
     //冒泡排序是先确定最后面的最大的数，而选择排序是先确定第一个数
-
     public static void selectSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
