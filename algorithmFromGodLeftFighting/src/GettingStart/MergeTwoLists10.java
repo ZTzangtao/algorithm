@@ -18,7 +18,7 @@ public class MergeTwoLists10 {
         ListNode cur2 = head == head1 ? head2 : head1;
         ListNode pre = head;
         while (cur1 != null && cur2 != null) {
-            if (cur1.val <= cur1.val) {
+            if (cur1.val <= cur2.val) {
                 pre.next = cur1;
                 cur1 = cur1.next;
             } else {
