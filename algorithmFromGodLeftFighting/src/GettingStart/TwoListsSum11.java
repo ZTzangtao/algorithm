@@ -5,7 +5,13 @@ import listNode.ListNode;
 import java.util.List;
 
 public class TwoListsSum11 {
-
+    /**
+     * https://leetcode.cn/problems/add-two-numbers/submissions/510595577/
+     *
+     * @param h1
+     * @param h2
+     * @return
+     */
     public ListNode AddTwoNumbers(ListNode h1, ListNode h2) {
         ListNode ans = null, cur = null;
         int carry = 0;
