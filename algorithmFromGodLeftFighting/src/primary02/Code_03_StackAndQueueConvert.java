@@ -11,7 +11,13 @@ import java.util.Stack;
  */
 public class Code_03_StackAndQueueConvert {
 
-    public static class TwoStackQueue{
+    /**
+     * 两个栈实现队列
+     *  1.pop只有空了，才能往pop里倒数据
+     *  2.如果要倒数据，数据一定要清完
+     *
+     */
+    public static class TwoStackQueue {
         private Stack<Integer> stackPush;
         private Stack<Integer> stackPop;
 
@@ -24,6 +30,7 @@ public class Code_03_StackAndQueueConvert {
             stackPush.push(pushInt);
         }
 
+
         public int poll(){
             if(stackPop.empty() && stackPush.empty()){
                 throw new RuntimeException("Queue is empty!");
@@ -35,12 +42,12 @@ public class Code_03_StackAndQueueConvert {
             return stackPop.pop();
         }
 
-        public int peek(){
-            if(stackPop.empty() && stackPush.empty()){
+        public int peek() {
+            if(stackPop.empty() && stackPush.empty()) {
                 throw new RuntimeException("Queue is empty!");
-            }else if(stackPop.empty()){
-                while (!stackPush.empty()){
-                    stackPop.push(stackPop.pop());
+            }else if(stackPop.empty()) {
+                while (!stackPush.empty()) {
+                    stackPop.push(stackPush.pop());
                 }
             }
             return stackPop.peek();
