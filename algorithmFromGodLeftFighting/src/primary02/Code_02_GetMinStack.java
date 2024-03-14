@@ -13,8 +13,8 @@ public class Code_02_GetMinStack {
         private Stack<Integer> stackMin;
 
         public MySatck1(){
-            this.stackDate = new Stack<Integer>();
-            this.stackMin = new Stack<Integer>();
+            this.stackDate = new Stack<>();
+            this.stackMin = new Stack<>();
         }
 
         public void push(int newNum){
@@ -37,6 +37,18 @@ public class Code_02_GetMinStack {
             return value;
         }
 
+        public int top(){
+            if (this.stackDate.isEmpty()){
+                throw new RuntimeException("Your stack is empty.");
+            }
+            int value = this.stackDate.peek();
+            if(value == this.getmin()){
+                this.stackMin.peek();
+            }
+            return value;
+        }
+
+
         public int getmin() {
             if(this.stackMin.isEmpty()){
                 throw new RuntimeException("Your stack is empty.");
@@ -50,8 +62,8 @@ public class Code_02_GetMinStack {
         private Stack<Integer> stackMin;
 
         public MyStack2(){
-            this.stackData = new Stack<Integer>();
-            this.stackMin = new Stack<Integer>();
+            this.stackData = new Stack<>();
+            this.stackMin = new Stack<>();
         }
 
         public void push(int newNum){
@@ -61,7 +73,7 @@ public class Code_02_GetMinStack {
                 this.stackMin.push(newNum);
             } else {
                 int newMin = this.stackMin.peek();
-                this.stackMin.push(newNum);
+                this.stackMin.push(newMin);
             }
             this.stackData.push(newNum);
         }
