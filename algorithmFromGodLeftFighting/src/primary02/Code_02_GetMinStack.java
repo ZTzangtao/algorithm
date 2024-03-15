@@ -22,6 +22,9 @@ public class Code_02_GetMinStack {
                 this.stackMin.push(newNum);
             } else if(newNum <= this.getmin()){
                 this.stackMin.push(newNum);
+            } else {
+                int newMin = this.stackMin.peek();
+                this.stackMin.push(newMin);
             }
             this.stackDate.push(newNum);
         }
@@ -57,42 +60,42 @@ public class Code_02_GetMinStack {
         }
     }
 
-    public static class MyStack2{
-        private Stack<Integer> stackData;
-        private Stack<Integer> stackMin;
+    public static class MyStack2 {
 
-        public MyStack2(){
-            this.stackData = new Stack<>();
-            this.stackMin = new Stack<>();
+        public final int MAXN = 8001;
+
+        public int[] data;
+
+        public int[] min;
+
+        int size;
+
+        public MyStack2() {
+            data = new int[MAXN];
+            min = new int[MAXN];
+            size = 0;
         }
 
-        public void push(int newNum){
-            if(this.stackMin.isEmpty()){
-                this.stackMin.push(newNum);
-            }else if(newNum < this.getmin()){
-                this.stackMin.push(newNum);
+        public void push(int val) {
+            data[size] = val;
+            if (size == 0 || val <= min[size - 1]) {
+                min[size] = val;
             } else {
-                int newMin = this.stackMin.peek();
-                this.stackMin.push(newMin);
+                min[size] = min[size - 1];
             }
-            this.stackData.push(newNum);
+            size++;
         }
 
-        public int pop(){
-            if (this.stackData.isEmpty()){
-                throw new RuntimeException("Your stack is empty.");
-            }
-            this.stackMin.pop();
-            return this.stackData.pop();
+        public void pop() {
+            size--;
+        }
+        public int top() {
+            return data[size - 1];
         }
 
-        private int getmin() {
-            if(this.stackMin.isEmpty()){
-                throw new RuntimeException("Your stack is empty.");
-            }
-            return this.stackMin.peek();
+        public int getMin() {
+            return min[size - 1];
         }
-
     }
 
 
