@@ -20,5 +20,33 @@ public class BinaryTreeTraversalRecrusion017 {
         preOrder(head.right);
     }
 
+    /**
+     * 中序遍历
+     *
+     * @param head
+     */
+    public static void  inOrder(TreeNode head) {
+        if (head == null) {
+            return;
+        }
+        preOrder(head.left);
+        System.out.print(head.val + " ");
+        preOrder(head.right);
+    }
+
+
+    /**
+     * 后续打印
+     *
+     * @param head
+     */
+    public static void  posOrder(TreeNode head) {
+        if (head == null) {
+            return;
+        }
+        preOrder(head.left);
+        preOrder(head.right);
+        System.out.print(head.val + " ");
+    }
 
 }
