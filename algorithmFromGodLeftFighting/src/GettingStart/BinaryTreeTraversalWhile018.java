@@ -45,5 +45,32 @@ public class BinaryTreeTraversalWhile018 {
         }
     }
 
+    /**
+     * 后续遍历
+     * 两个栈实现
+     *
+     * @param head
+     */
+    public static void posOrder (TreeNode head) {
+        if (head != null) {
+            Stack<TreeNode> stack = new Stack<>();
+            Stack<TreeNode> collect = new Stack<>();
+            stack.push(head);
+            while(!stack.isEmpty()) {
+                head = stack.pop();
+                collect.push(head);
+                if (head.left != null) {
+                    stack.push(head.left);
+                }
+                if (head.right != null) {
+                    stack.push(head.right);
+                }
+            }
+            while (!collect.isEmpty()) {
+                System.out.print(collect.pop().val + " ");
+            }
+            System.out.println();
+        }
+    }
 
 }
