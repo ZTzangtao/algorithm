@@ -73,4 +73,37 @@ public class BinaryTreeTraversalWhile018 {
         }
     }
 
+    /**
+     * 后续遍历
+     * 一个栈实现
+     *
+     * @param head
+     */
+    public static void posOrder1 (TreeNode head) {
+        if (head != null) {
+            Stack<TreeNode> stack = new Stack<>();
+            stack.push(head);
+            /**
+             * 如果始终没有打印过节点，head就一直是头节点
+             * 一旦打印过节点，head就变成打印节点
+             * 之后head的含义： 上一次打印的节点
+             */
+            while(!stack.isEmpty()) {
+                TreeNode cur = stack.peek();
+                // 有左树，且左树没有被处理过
+                if (cur.left != null && head != cur.left && head != cur.right) {
+                    stack.push(cur.left);
+                } else if (head.right != null && head != cur.right) {
+                    // 有右树，且右树没有被处理过
+                    stack.push(head.right);
+                } else {
+                    // 左树、右树 没有 或者 都处理过了
+                    System.out.println(cur.val + " ");
+                    head = stack.pop();
+                }
+            }
+            System.out.println();
+        }
+    }
+
 }
