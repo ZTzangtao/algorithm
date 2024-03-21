@@ -28,6 +28,11 @@ public class BinaryTreeTraversalWhile018 {
         }
     }
 
+    /**
+     * https://leetcode.cn/problems/binary-tree-inorder-traversal/description/
+     *
+     * @param head
+     */
     public static void inOrder (TreeNode head) {
         if (head != null) {
             Stack<TreeNode> stack = new Stack<>();
