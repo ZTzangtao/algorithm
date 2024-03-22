@@ -17,9 +17,25 @@ public class algorithm_019_SpecifyAmount {
         while (in.nextToken() != StreamTokenizer.TT_EOF) { // 文件没有结束就继续
             // n,二维数组的行
             int n = (int) in.nval;
-
+            in.nextToken();
+            // m,二维数组的列
+            int m = (int) in.nval;
+            // 装数字的矩阵，临时动态生成
+            int[][] mat = new int[n][m];
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    in.nextToken();
+                    mat[i][j] = (int) in.nval;
+                }
+            }
+            out.println(maxSumSubmatrix(mat, n, m));
         }
+        out.flush();
+        out.close();
+    }
 
+    private static boolean maxSumSubmatrix(int[][] mat, int n, int m) {
+        return false;
     }
 
 }
