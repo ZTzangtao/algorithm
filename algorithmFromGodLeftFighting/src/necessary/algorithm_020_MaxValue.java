@@ -19,9 +19,9 @@ public class algorithm_020_MaxValue {
             return arr[l];
         }
         int m = (l + r) / 2;
-        int lmax = f(arr, l, m);
-        int rmax = f(arr, m+1, r);
-        return Math.max(lmax, rmax);
+        int lMax = f(arr, l, m);
+        int rMax = f(arr, m+1, r);
+        return Math.max(lMax, rMax);
     }
 
 }
