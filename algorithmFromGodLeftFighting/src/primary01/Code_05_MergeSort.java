@@ -100,8 +100,8 @@ public class Code_05_MergeSort {
         int p1 = L;
         int p2 = mid + 1;
         while (p1 <= mid && p2 <= R) {
-            help[i++] =
-                    arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
+            // 从小到大赋值到help数组上
+            help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
         }
         //两个必有且只有一个越界
         while (p1 <= mid) {
