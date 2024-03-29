@@ -50,7 +50,7 @@ public class algorithm_22_1_merge_SmallSum {
             ans += sum;
         }
         // 正常merge
-        int i = l;
+        int i = l; //如果是普通方法，应该从0开始
         int p1 = l;
         int p2 = m + 1;
         while (p1 <= m && p2 <= r) {
