@@ -35,13 +35,22 @@ public class Code_04_QuickSort {
         }
     }
 
+    /**
+     *
+     * @param arr 原数组
+     * @param L 左侧
+     * @param R 右侧
+     * @return
+     */
     public static int[] partition(int[] arr, int L, int R) {
+        // 最左侧，小于more的值
         int less = L - 1;
         int more = R;
         while (L < more) {
             if (arr[L] < arr[R]) {
                 swap(arr, ++less, L++);
             } else if (arr[L] > arr[R]) {
+                // 先减一, 再赋值
                 swap(arr, --more, L);
             } else {
                 L++;
