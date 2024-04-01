@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Code_04_QuickSort {
 
     public static void main(String[] args) {
-        int[] arr = {1,3,5,5,46,4,42,2,23,42,35,42};
+        int[] arr = {1, 3, 5, 5, 46, 4, 42, 2, 23, 42, 35, 42, 3};
         int[] newArr = partition(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
         System.out.println(Arrays.toString(newArr));
