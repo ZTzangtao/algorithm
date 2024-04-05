@@ -32,7 +32,9 @@ public class algorithm_24_2_RandomizedSelect {
         // 0 ~ n-1
         // l ~ r
         for (int l = 0, r = arr.length - 1; l <= r;) {
-            partition(arr, l, r, arr[ l + (int)(Math.random() * (r - l + 1))]);
+            partition(arr, l, r, arr[l + (int)(Math.random() * (r - l + 1))]);
+            System.out.println("first : " + first);
+            System.out.println("last : " + last);
             //       i
             // first  last
             if (i < first) {
