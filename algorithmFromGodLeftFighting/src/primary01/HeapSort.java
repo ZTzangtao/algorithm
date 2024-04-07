@@ -40,6 +40,8 @@ public class HeapSort {
      * @param index
      */
     public static void heapInsert(int[] arr, int index) {
+        // 当前值与父亲节点相比，如果大于父亲节点就交换
+        //i -> 父亲节点的值
         while (arr[index] > arr[(index - 1) / 2]) {
             swap(arr, index, (index - 1)/2);
             index = (index - 1) / 2;
