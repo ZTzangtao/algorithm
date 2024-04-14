@@ -10,7 +10,13 @@ import java.util.List;
 public class NQueue {
 
     public static void main(String[] args) {
-        solveNQueens(4);
+        List<List<String>> list = solveNQueens(4);
+        list.forEach(c -> {
+            c.forEach(e ->
+                System.out.print(e + ",")
+             );
+            System.out.println();
+        });
     }
 
 
@@ -33,7 +39,6 @@ public class NQueue {
                 if (j == n) {
                     strings = new ArrayList<>();
                     for (int i = 1; i <= n; i++) {
-                        System.out.println(q[i]);
                         String pointOriginal = point.repeat(n);
                         char[] chars = pointOriginal.toCharArray();
                         chars[q[i] - 1] = queue.charAt(0);
