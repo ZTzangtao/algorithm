@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * N皇后非递归求解
+ *
  * https://leetcode.cn/problems/n-queens/description/
  */
 public class NQueue {
