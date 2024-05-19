@@ -21,10 +21,15 @@ public class HeapSort {
         if(arr == null || arr.length < 2) {
             return;
         }
-        // 建立大根堆 时间复杂度
-        for(int i = 0; i < arr.length; i++) {
+        // 建立大根堆 时间复杂度 由顶到底
+//        for(int i = 0; i < arr.length; i++) {
+//            heapInsert(arr, i);
+//        }
+        // 由底到顶建堆
+        for (int i = arr.length - 1; i >= 0; i--) {
             heapInsert(arr, i);
         }
+
         int heapSize = arr.length;
 //        swap(arr, 0, --heapSize);
         while (heapSize > 1) {
