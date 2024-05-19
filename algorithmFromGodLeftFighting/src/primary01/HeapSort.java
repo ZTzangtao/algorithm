@@ -27,7 +27,8 @@ public class HeapSort {
 //        }
         // 由底到顶建堆
         for (int i = arr.length - 1; i >= 0; i--) {
-            heapInsert(arr, i);
+//            heapInsert(arr, i);
+            heapify(arr, i, arr.length - 1);
         }
 
         int heapSize = arr.length;
