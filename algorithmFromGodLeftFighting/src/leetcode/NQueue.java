@@ -41,7 +41,9 @@ public class NQueue {
                 if (j == n) {
                     strings = new ArrayList<>();
                     for (int i = 1; i <= n; i++) {
-                        String pointOriginal = point.repeat(n);
+                        // jdk11 语法
+//                        String pointOriginal = point.repeat(n);
+                        String pointOriginal = point;
                         char[] chars = pointOriginal.toCharArray();
                         chars[q[i] - 1] = queue.charAt(0);
                         strings.add(Arrays.toString(chars).replace(", ", "")
