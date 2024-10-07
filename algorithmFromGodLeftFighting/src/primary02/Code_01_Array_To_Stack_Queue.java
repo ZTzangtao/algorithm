@@ -12,8 +12,8 @@ public class Code_01_Array_To_Stack_Queue {
         private Integer[] arr;
         private Integer index;
 
-        public ArrayStack(int initSize){
-            if(initSize < 0){
+        public ArrayStack(int initSize) {
+            if(initSize < 0) {
                 throw new IllegalArgumentException("");
             }
             arr = new Integer[initSize];
@@ -21,20 +21,20 @@ public class Code_01_Array_To_Stack_Queue {
         }
 
         public Integer peek() {
-            if(index == 0){
+            if(index == 0) {
                 return null;
             }
             return arr[index - 1];
         }
 
-        public void push(int obj){
-            if (index == arr.length){
+        public void push(int obj) {
+            if (index == arr.length) {
                 throw new ArrayIndexOutOfBoundsException("The queue is full");
             }
             arr[index++] = obj;
         }
 
-        public Integer pop(){
+        public Integer pop() {
             if (index == 0) {
                 throw new ArrayIndexOutOfBoundsException("The queue is empty");
             }
@@ -48,8 +48,8 @@ public class Code_01_Array_To_Stack_Queue {
         private Integer start;
         private Integer end;
 
-        public ArrayQueue(int initSize){
-            if (initSize < 0){
+        public ArrayQueue(int initSize) {
+            if (initSize < 0) {
                 throw new IllegalArgumentException("The init size is less than 0");
             }
             arr = new Integer[initSize];
@@ -58,15 +58,15 @@ public class Code_01_Array_To_Stack_Queue {
             end = 0;
         }
 
-        public Integer peek(){
-            if(size == 0){
+        public Integer peek() {
+            if(size == 0) {
                 return null;
             }
             return arr[start];
         }
 
-        public void push(int obj){
-            if (size == arr.length){
+        public void push(int obj) {
+            if (size == arr.length) {
                 throw new ArrayIndexOutOfBoundsException("The queue is full");
             }
             size++;
@@ -74,8 +74,8 @@ public class Code_01_Array_To_Stack_Queue {
             end = end == arr.length - 1 ? 0 : end + 1;
         }
 
-        public Integer poll(){
-            if(size == 0){
+        public Integer poll() {
+            if(size == 0) {
                 throw new ArrayIndexOutOfBoundsException("The queue is empty");
             }
             size--;

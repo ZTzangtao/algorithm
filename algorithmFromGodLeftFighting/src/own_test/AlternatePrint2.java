@@ -32,9 +32,8 @@ public class AlternatePrint2 {
         t2 = new Thread(() -> {
             synchronized (o) {
                 for (char c : ch) {
-
                     System.out.print(c);
-                  o.notify();
+                    o.notify();
                     try {
                         o.wait();
                     } catch (InterruptedException e) {
@@ -43,6 +42,22 @@ public class AlternatePrint2 {
                 }
             }
         }, "t2");
+
+//        new Thread(() -> {
+//            synchronized (o) {
+//                for (char c : ch) {
+//
+//                    System.out.print(c);
+//                    o.notify();
+//                    try {
+//                        o.wait();
+//                    } catch (InterruptedException e) {
+//                        throw new RuntimeException(e);
+//                    }
+//                }
+//            }
+//        }, "t3").start();
+
         t1.start();
         t2.start();
 

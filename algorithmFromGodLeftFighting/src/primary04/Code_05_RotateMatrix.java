@@ -6,6 +6,9 @@ package primary04;
  */
 public class Code_05_RotateMatrix {
 
+    public static void main(String[] args) {
+
+    }
 
     /**
      * 循环打印二维数组

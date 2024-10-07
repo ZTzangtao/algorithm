@@ -1,10 +1,13 @@
 package own_test;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.StampedLock;
 
 public class AlternatePrint3 {
 
     private static CountDownLatch latch = new CountDownLatch(1);
+
+    private static StampedLock stampedLock;
 
     static Thread t1 = null, t2 = null;
 

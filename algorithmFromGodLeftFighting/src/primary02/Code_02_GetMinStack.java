@@ -8,19 +8,19 @@ import java.util.Stack;
  */
 public class Code_02_GetMinStack {
 
-    public static class MySatck1{
+    public static class MySatck1 {
         private Stack<Integer> stackDate;
         private Stack<Integer> stackMin;
 
-        public MySatck1(){
+        public MySatck1() {
             this.stackDate = new Stack<>();
             this.stackMin = new Stack<>();
         }
 
-        public void push(int newNum){
-            if (this.stackMin.isEmpty()){
+        public void push(int newNum) {
+            if (this.stackMin.isEmpty()) {
                 this.stackMin.push(newNum);
-            } else if(newNum <= this.getmin()){
+            } else if (newNum <= this.getmin()) {
                 this.stackMin.push(newNum);
             } else {
                 int newMin = this.stackMin.peek();
@@ -29,23 +29,23 @@ public class Code_02_GetMinStack {
             this.stackDate.push(newNum);
         }
 
-        public int pop(){
-            if (this.stackDate.isEmpty()){
+        public int pop() {
+            if (this.stackDate.isEmpty()) {
                 throw new RuntimeException("Your stack is empty.");
             }
             int value = this.stackDate.pop();
-            if(value == this.getmin()){
+            if(value == this.getmin()) {
                 this.stackMin.pop();
             }
             return value;
         }
 
-        public int top(){
-            if (this.stackDate.isEmpty()){
+        public int top() {
+            if (this.stackDate.isEmpty()) {
                 throw new RuntimeException("Your stack is empty.");
             }
             int value = this.stackDate.peek();
-            if(value == this.getmin()){
+            if(value == this.getmin()) {
                 this.stackMin.peek();
             }
             return value;
@@ -53,7 +53,7 @@ public class Code_02_GetMinStack {
 
 
         public int getmin() {
-            if(this.stackMin.isEmpty()){
+            if(this.stackMin.isEmpty()) {
                 throw new RuntimeException("Your stack is empty.");
             }
             return this.stackMin.peek();
