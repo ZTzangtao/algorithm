@@ -2,6 +2,7 @@ package GettingStart;
 
 import listNode.ListNode;
 
+import javax.crypto.interfaces.PBEKey;
 import java.util.List;
 
 /**
@@ -29,6 +30,30 @@ public class ListResverse09 {
         return pre;
     }
 
+
+    public static class DoubleListNode {
+        public int value;
+        public DoubleListNode last;
+        public DoubleListNode next;
+        public DoubleListNode (int v) {
+            value = v;
+        }
+    }
+
+
+    public static DoubleListNode reverseDoubleList (DoubleListNode head) {
+        DoubleListNode pre = null;
+        DoubleListNode next;
+        while (head != null) {
+            next = head.next;
+            head.next = pre;
+            head.last = next;
+            pre = head;
+            head = next;
+        }
+        return pre;
+    }
+
     public static void main(String[] args) {
        int[] arr = {1,2,4,2,3,4,4,6,43,332};
         g3(arr);
@@ -37,13 +62,15 @@ public class ListResverse09 {
         System.out.println(arr[0]);
     }
 
+    private static void g3(int[] arr) {
+        arr = null;
+    }
+
     private static void g4(int[] arr) {
         arr[0] = 100;
     }
 
-    private static void g3(int[] arr) {
-        arr = null;
-    }
+
 
 
 
