@@ -15,6 +15,9 @@ public class MyThread {
      * time_waiting: 调用sleep方法或者join方法，会被自动唤醒，无需手动唤醒
      * terminated：run方法执行完毕，线程生命周期到头了
      *
+     * 线程设置名字 t1.setName("模块-功能-计数器")
+     * 线程的优先级，就是线程调度的优先级
+     *
      * @param args
      * @throws InterruptedException
      */
