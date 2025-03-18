@@ -46,7 +46,7 @@ public class BinarySearch {
 
     //大于等于num的最小位置
     public static int minIndex(int[] arr, int num) {
-        if (arr.length == 0 || arr == null) {
+        if (arr.length == 0) {
             return -1;
         }
         int ans = -1;
@@ -65,7 +65,7 @@ public class BinarySearch {
     }
 
     public static int maxIndex(int[] arr, int num) {
-        if (arr.length == 0 || arr == null) {
+        if (arr.length == 0) {
             return -1;
         }
         int ans = -1;
@@ -87,7 +87,7 @@ public class BinarySearch {
 
     // arr 有序的情况下，判断num存在与否
     public static boolean exist(int[] arr, int num) {
-        if (arr.length == 0 || arr == null) {
+        if (arr.length == 0) {
             return false;
         }
         // 左边界，有边界和终点
