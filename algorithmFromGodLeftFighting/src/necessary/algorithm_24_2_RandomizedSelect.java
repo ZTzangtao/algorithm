@@ -1,11 +1,18 @@
 package necessary;
 
-//todo  fix
-
+/**
+ * 随机选择算法 时间复杂度O(N) 额外空间复杂度O(1)
+ */
 public class algorithm_24_2_RandomizedSelect {
 
+    /**
+     * 返回第K大
+     *
+     * @param args
+     */
     public static void main(String[] args) {
-        System.out.println(findKthLargest(new int[]{3,2,1,5,6,4}, 2));
+        System.out.println(
+                findKthLargest(new int[] {3, 2, 1, 5, 6, 4}, 2));
     }
 
     /**
@@ -17,11 +24,12 @@ public class algorithm_24_2_RandomizedSelect {
      */
 
     public static int findKthLargest (int[] nums, int k) {
+        // 第N - 1 大
         return randomizedSelect(nums, nums.length - k);
     }
 
     /**
-     *
+     * 如果arr排序的话， i位置上的数是什么
      *
      * @param arr
      * @param i

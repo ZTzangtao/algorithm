@@ -4,6 +4,9 @@ import primary01.Code_00_BubbleSort;
 import primary01.Code_01_InsertionSort;
 import primary01.Code_02_SelectionSort;
 
+/**
+ * 对数器
+ */
 import java.util.Arrays;
 
 public class Validator {
