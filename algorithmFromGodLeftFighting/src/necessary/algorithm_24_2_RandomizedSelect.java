@@ -12,7 +12,7 @@ public class algorithm_24_2_RandomizedSelect {
      */
     public static void main(String[] args) {
         System.out.println(
-                findKthLargest(new int[] {3, 2, 1, 5, 6, 4}, 2));
+                findKthLargest(new int[] {3, 2, 1, 5, 6, 4, 7}, 2));
     }
 
     /**
@@ -40,10 +40,8 @@ public class algorithm_24_2_RandomizedSelect {
         // 0 ~ n-1
         // l ~ r
         for (int l = 0, r = arr.length - 1; l <= r;) {
+            // 随机
             partition(arr, l, r, arr[l + (int) (Math.random() * (r - l + 1))]);
-            System.out.println("first : " + first);
-            System.out.println("last : " + last);
-            //       i
             // first  last
             if (i < first) {
                 r = first - 1;
@@ -58,8 +56,9 @@ public class algorithm_24_2_RandomizedSelect {
         return ans;
     }
 
-    // 荷兰国旗问题
     public static int first, last;
+
+    // 荷兰国旗问题
     // < x   ==x   >x
     public static void partition(int[] arr, int L, int R, int x) {
         first = L;
