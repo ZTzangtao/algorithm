@@ -21,9 +21,11 @@ public class KMPDemo {
         int[] nextArray = getNextArray(str2);
         while (i1 < str1.length &&  i2 < str2.length) {
             if(str1[i1] == str2[i2]) {
+                // 如果相等就++
                 i1++;
                 i2++;
-            }else if (nextArray[i2] == -1){
+            } else if (nextArray[i2] == -1){
+                // 如果不等 且第一个数就不等
                 i1++;
             } else {
                 i2 = nextArray[i2];
@@ -32,6 +34,12 @@ public class KMPDemo {
         return i2 == str2.length ? i1 - i2 : -1;
     }
 
+    /**
+     * 求最长前后缀匹配字符串长度
+     *
+     * @param str2 目标匹配字符串
+     * @return
+     */
     public static int[] getNextArray(char[] str2) {
         if (str2.length <= 1) {
             return new int[] { -1 };
