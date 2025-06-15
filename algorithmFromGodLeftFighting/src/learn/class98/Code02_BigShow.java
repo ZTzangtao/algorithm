@@ -1,4 +1,4 @@
-package class98;
+package learn.class98;
 
 public class Code02_BigShow {
 

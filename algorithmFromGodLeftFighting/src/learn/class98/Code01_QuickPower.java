@@ -1,4 +1,4 @@
-package class98;
+package learn.class98;
 
 import java.io.*;
 
