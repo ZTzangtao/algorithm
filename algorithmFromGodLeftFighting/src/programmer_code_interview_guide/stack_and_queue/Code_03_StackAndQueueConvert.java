@@ -1,4 +1,4 @@
-package primary02;
+package programmer_code_interview_guide.stack_and_queue;
 
 
 import java.util.LinkedList;
@@ -136,5 +136,62 @@ public class Code_03_StackAndQueueConvert {
         }
 
     }
+
+    // import java.io.*;
+    //import java.util.*;
+    //
+    //
+    //// 注意类名必须为 Main, 不要有任何 package xxx 信息
+    //public class Main {
+    //    static Stack<Integer> enterStack = new Stack<>();
+    //
+    //    static Stack<Integer> goStack = new Stack<>();
+    //
+    //    public static void add (int val) {
+    //        enterStack.push(val);
+    //    }
+    //
+    //    public static int peek () {
+    //        if (!goStack.isEmpty()) {
+    //            return goStack.peek();
+    //        } else {
+    //            while (!enterStack.isEmpty()) {
+    //                goStack.push(enterStack.pop());
+    //            }
+    //            return goStack.peek();
+    //        }
+    //    }
+    //
+    //    public static int poll () {
+    //        if (!goStack.isEmpty()) {
+    //            return goStack.pop();
+    //        } else {
+    //            while (!enterStack.isEmpty()) {
+    //                goStack.push(enterStack.pop());
+    //            }
+    //            return goStack.pop();
+    //        }
+    //
+    //    }
+    //
+    //    public static void main(String[] args) throws Exception {
+    //        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+    //        int n = Integer.valueOf(in.readLine());
+    //        for (int i = 0; i < n; i++) {
+    //            String input = in.readLine();
+    //            String[] elements = input.split(" ");
+    //            if ("add".equals(elements[0])) {
+    //                add(Integer.parseInt(elements[1]));
+    //            } else if ("peek".equals(input)) {
+    //                System.out.println(peek());
+    //            } else if ("poll".equals(input)) {
+    //                // poll
+    //                poll();
+    //            }
+    //        }
+    //
+    //
+    //    }
+    //}
 
 }
