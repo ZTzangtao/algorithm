@@ -13,6 +13,7 @@ public class ReverseStackWithRecursion {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(bufferedReader.readLine());
         String str =  bufferedReader.readLine();
+        bufferedReader.close();
         String[] strArr = str.split(" ");
         for (int i = 0; i < n; i++) {
             originalStack.push(Integer.parseInt(strArr[i]));
